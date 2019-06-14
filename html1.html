@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title>formDemo.html</title>
+    <meta charset = "UTF-8" />
+    <link rel="stylesheet" href="css1.css">
+  </head>
+  <body onload="createCaptcha()">
+      <header><img src="C:\Users\Sanjay\Desktop\amrita.png"/></header>
+    <h1>Registration Form</h1>
+    <script src="sanjay.js"></script>
+    <form method="POST" action="C:\Users\Sanjay\Desktop\Submit.html" method="get">
+      <fieldset>
+        <legend>Candidate details</legend>
+        <div id="leftContainer">
+            <span>Name of the Student</span>
+            <br><input type="text" name="Name" placeholder="Name" required>
+          </div>
+          <div id="rightContainer" >
+              
+            <span>Date Of Birth</span>
+            <br><input type="text" id="txtDate" onblur = "ValidateDOB()" placeholder="DD/MM/YYYY" required>
+            <span class="error" id="lblError">
+  
+                </span>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          <div id="leftContainer1" >
+            <span>Age</span>
+            <br><input id="age" readonly="readonly" type="text" required>
+          </div>
+          <div id="rightContainer1">
+            <span>Email Address</span>
+            <br><input id="email" type="text" onblur="validateemail(this);" placeholder="xxx@gmail.com"required>
+          </div>
+          <div id="rightContainer2" >
+                <span>Mobile Number</span>
+                <br><input  id="number" onblur="Validatenumber(this);" type="text" required >
+              </div>
+<br/>
+<br/>
+<br/>
+
+         <div id="leftContainer2" >
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> transgender<br>  
+                  </div>
+            <div id="rightContainer2" >
+                        <label>Category</label>
+                        <select id = "myList">
+                          <option value = "1">GEN</option>
+                          <option value = "2">SC</option>
+                          <option value = "3">ST</option>
+                          <option value = "4">OBC</option>
+                        </select>
+                      </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+                      
+                          <form onsubmit="validateCaptcha()">
+                                <div id="captcha" id="leftContainer3">
+                                </div>
+                                <input type="text" placeholder="Captcha" id="cpatchaTextBox" required/>
+                                <button type="submit" value="Submit" id="btnValidate"  onclick="myfunction();validateCaptcha();return ValidateDOB();validateemail();return Validatenumber();myFunction();">Submit</button>
+                              </form>
+      </fieldset>
+    </form>
+    <footer ><img src="C:\Users\Sanjay\Desktop\amrita1.png"/></footer>
+  </body>
+</html>
